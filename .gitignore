@@ -1,0 +1,25 @@
+# Build artifacts
+/target/
+/dist/
+
+# Cargo lock (optional for binaries, include if you want reproducible builds)
+# Cargo.lock
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Debug
+*.pdb
+
+# Environment
+.env
+.env.local
+

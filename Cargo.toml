@@ -1,0 +1,19 @@
+[package]
+name = "ddnsfw"
+version = "2.3.1"
+edition = "2021"
+description = "Ultra-lightweight DDNS-based iptables firewall synchronizer"
+license = "MIT"
+
+[dependencies]
+libc = "0.2"
+ureq = { version = "2", features = ["json"] }
+serde = { version = "1", features = ["derive"] }
+rustls = "0.23"
+
+[profile.release]
+opt-level = "z"      # Optimize for size
+lto = true           # Link-time optimization
+codegen-units = 1    # Single codegen unit for better optimization
+strip = true         # Strip symbols
+panic = "abort"      # No unwinding
